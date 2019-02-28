@@ -30,13 +30,13 @@ describe('AppComponent', () => {
     }).compileComponents();
   }));
 
-  it('should create the app', async () => {
+  it('debe crear la aplicacion', async () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   });
 
-  it('should initialize the app', async () => {
+  it('debería inicializar la aplicacion', async () => {
     TestBed.createComponent(AppComponent);
     expect(platformSpy.ready).toHaveBeenCalled();
     await platformReadySpy;
@@ -44,23 +44,31 @@ describe('AppComponent', () => {
     expect(splashScreenSpy.hide).toHaveBeenCalled();
   });
 
-  it('should have menu labels', async () => {
+  it('debe tener etiquetas de menu', async () => {
     const fixture = await TestBed.createComponent(AppComponent);
     await fixture.detectChanges();
     const app = fixture.nativeElement;
     const menuItems = app.querySelectorAll('ion-label');
-    expect(menuItems.length).toEqual(2);
+    expect(menuItems.length).toEqual(6);
     expect(menuItems[0].textContent).toContain('Home');
-    expect(menuItems[1].textContent).toContain('List');
+    expect(menuItems[1].textContent).toContain('Library');
+    expect(menuItems[2].textContent).toContain('Profile');
+    expect(menuItems[3].textContent).toContain('Evaluation');
+    expect(menuItems[4].textContent).toContain('Result');
+    expect(menuItems[5].textContent).toContain('List');
   });
 
-  it('should have urls', async () => {
+  it('deberia tener urls', async () => {
     const fixture = await TestBed.createComponent(AppComponent);
     await fixture.detectChanges();
     const app = fixture.nativeElement;
     const menuItems = app.querySelectorAll('ion-item');
-    expect(menuItems.length).toEqual(2);
+    expect(menuItems.length).toEqual(6);
     expect(menuItems[0].getAttribute('ng-reflect-router-link')).toEqual('/home');
+    expect(menuItems[0].getAttribute('ng-reflect-router-link')).toEqual('/library');
+    expect(menuItems[0].getAttribute('ng-reflect-router-link')).toEqual('/profile');
+    expect(menuItems[0].getAttribute('ng-reflect-router-link')).toEqual('/evaluation');
+    expect(menuItems[0].getAttribute('ng-reflect-router-link')).toEqual('/result');
     expect(menuItems[1].getAttribute('ng-reflect-router-link')).toEqual('/list');
   });
 

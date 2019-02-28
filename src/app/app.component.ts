@@ -18,22 +18,22 @@ export class AppComponent {
     {
       title: 'Biblioteca',
       url: '/library',
-      icon: 'home'
+      icon: 'bookmarks'
     },
     {
       title: 'Perfil',
       url: '/profile',
-      icon: 'home'
+      icon: 'contact'
     },
     {
       title: 'Evaluacion',
       url: '/evaluation',
-      icon: 'home'
+      icon: 'clipboard'
     },
     {
       title: 'Resultado',
       url: '/result',
-      icon: 'home'
+      icon: 'pie'
     },
     {
       title: 'List',

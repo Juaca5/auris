@@ -1,0 +1,27 @@
+ion-content {
+    --background: #fff url('../../assets/img/background.png') no-repeat center center / cover;
+}
+
+ion-grid {
+    position: center;
+}
+
+ion-card {
+    border: 1px #fff solid;
+}
+
+ion-img {
+    height: 100px;
+    width: auto;
+}
+
+ion-row,
+ion-col,
+ion-item {
+    --background: transparent;
+}
+
+ion-input {
+    --background: #fff no-repeat center center / cover;
+    border-radius: 25px;
+}

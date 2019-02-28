@@ -1,0 +1,6 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "auris_app",
+  "bundledWebRuntime": false,
+  "webDir": "www"
+}
